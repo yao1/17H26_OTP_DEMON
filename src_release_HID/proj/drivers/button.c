@@ -53,6 +53,10 @@ void gpio0_user_irq_handler(void)
 	extern void spi_irq_callback();
 	spi_irq_callback();
 #endif
+#if 1
+	extern void gp4_irq();
+	gp4_irq();
+#endif
 	/* This procedure is used to DISAPPEARS SHAKES */
     if ( !clock_time_exceed(buttonLastTime, BUTTON_DISAPPEAR_SHAKE_TIMER) ) {
         return;
